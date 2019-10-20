@@ -1,0 +1,49 @@
+body {
+  font-size: 15px;
+  //font-family: monospace;
+  
+}
+
+button {
+  background: #ffc600;
+  border: 0;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+///added css
+.top{
+  display: grid;
+  grid-template-areas: 
+  "hero hero ct1"
+  "hero hero ct2"
+}
+
+.hero{
+  grid-area: hero;
+  background: white url(../images/taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+
+  &>*{
+    background: var(--yellow);
+  }
+}
+
+
+.cta1{
+  grid-area: cta1;
+}
+
+.cta2{
+  grid-area: cta2;
+}
+
+
