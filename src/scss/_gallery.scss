@@ -1,0 +1,35 @@
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    text-transform: uppercase;
+    align-items: center;
+
+    &::before,
+    &::after {
+      display: block;
+      //position: absolute;
+      content: "";
+      height: 10px;
+      background: linear-gradient(
+        to var(--direction, left),
+        var(--yellow),
+        transparent
+      );
+    }
+
+    &::after {
+      --direction: right;
+    }
+  }
+}

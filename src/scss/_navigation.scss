@@ -1,0 +1,48 @@
+.menu {
+
+    ul{
+        display: grid;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;
+        list-style: none;
+
+        @media (max-width: 1000px) {
+           max-height: 0;
+           transform: rotateX(90deg);
+           transition: all .5s;
+        }
+
+    }
+    
+     a{
+        background: var(--yellow);
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        color: var(--black);
+        text-transform: uppercase;
+        font-size: 17px;
+        //list-style: none;
+    }
+
+    @media (max-width: 1000px) {
+        order: -1;
+    }
+
+}
+
+[aria-controls = "menu-list"]{
+    display: none;
+
+    @media (max-width: 1000px) {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+

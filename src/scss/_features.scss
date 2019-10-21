@@ -1,0 +1,24 @@
+.features {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  .feature {
+    background: white;
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+    .icon{
+        font-size: 50px;
+    }
+
+    p{
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+ 
+}
+
